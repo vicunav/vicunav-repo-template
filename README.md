@@ -1,26 +1,26 @@
-# GitHub Repository Template
+# Plantilla de repositorio de GitHub
 
-This repository is a reusable starting point for new GitHub repositories. Creating a repository from this template copies its files and directory structure into a new, independent repository without treating it as a fork.
+Este repositorio es un punto de partida reutilizable para nuevos repositorios de GitHub. Crear un repositorio a partir de esta plantilla copia sus archivos y estructura de directorios en un repositorio nuevo e independiente, sin tratarlo como un fork.
 
-## Create a repository from this template
+## Crear un repositorio a partir de esta plantilla
 
-1. Open this template repository on GitHub.
-2. Select **Use this template**, then **Create a new repository**.
-3. Choose the owner, repository name, description, and visibility.
-4. Select **Create repository**.
-5. Clone the new repository, including its submodules:
+1. Abre este repositorio de plantilla en GitHub.
+2. Selecciona **Use this template** y luego **Create a new repository**.
+3. Elige el propietario, el nombre del repositorio, la descripción y la visibilidad.
+4. Selecciona **Create repository**.
+5. Clona el nuevo repositorio, incluidos sus submódulos:
 
    ```bash
    git clone --recurse-submodules https://github.com/OWNER/REPOSITORY.git
    cd REPOSITORY
    ```
 
-If the repository was cloned without submodules, initialize them afterward:
+Si el repositorio se clonó sin submódulos, inicialízalos después:
 
 ```bash
 git submodule update --init --recursive
 ```
 
-After creating the repository, replace this README with project-specific documentation and configure the tools, permissions, and branch protections required by the new project.
+Después de crear el repositorio, reemplaza este README con documentación específica del proyecto y configura las herramientas, los permisos y las protecciones de ramas que requiera el nuevo proyecto.
 
-For more information, see GitHub's guide to [creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+Para obtener más información, consulta la guía de GitHub para [crear un repositorio a partir de una plantilla](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
