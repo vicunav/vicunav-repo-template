@@ -1,6 +1,17 @@
-# GitHub Repository Template
+# Vicunav Repository Template
 
-This repository is a reusable starting point for new GitHub repositories. Creating a repository from this template copies its files and directory structure into a new, independent repository, without treating it as a fork.
+Reusable starting point for repositories in the Vicunav ecosystem. Creating a
+repository from this template copies its files and directory structure into a new,
+independent repository without treating it as a fork.
+
+## Included foundation
+
+- `AGENTS.md` with placeholders for repository-specific instructions.
+- `CONTRIBUTING.md` with the atomic issue and squash-merge workflow.
+- `docs/standards/` pinned to the shared Vicunav standards.
+- A structured atomic-task issue form.
+- PHP linting with WordPress Coding Standards in GitHub Actions.
+- GPL-2.0-or-later licensing suitable for WordPress themes and plugins.
 
 ## Creating a repository from this template
 
@@ -21,6 +32,20 @@ If the repository was cloned without submodules, initialize them afterward:
 git submodule update --init --recursive
 ```
 
-After creating the repository, replace this README with project-specific documentation and set up the tooling, permissions, and branch protections the new project requires.
+## Required customization
+
+After creating the repository:
+
+1. Replace this README with project-specific documentation in English.
+2. Replace every placeholder in `AGENTS.md` and document the actual validation
+   commands.
+3. Confirm that the standards submodule points to the intended commit.
+4. Add the package bootstrap, tests, and tooling required by its contract.
+5. Configure branch protection and allow only squash-merge pull requests into `main`.
+6. Verify that no `{{PLACEHOLDER}}` values remain in versioned files.
+
+Do not add product-specific files to this template merely because one consumer needs
+them. Shared repository scaffolding belongs here; package behavior belongs in the new
+repository.
 
 For more information, see the GitHub guide on [creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
