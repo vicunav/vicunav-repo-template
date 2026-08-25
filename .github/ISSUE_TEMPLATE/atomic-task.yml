@@ -31,3 +31,28 @@ body:
         - [ ] criterio dos
     validations:
       required: true
+
+  - type: dropdown
+    id: impacto-visual
+    attributes:
+      label: Impacto visual
+      description: Clasifica el cambio según el estándar de fidelidad visual.
+      options:
+        - ninguno - no cambia ninguna superficie renderizada
+        - cambio-visual - cambia una interfaz sin contrato de paridad externa
+        - paridad-1-1 - debe reproducir un diseño aprobado
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencia-visual
+    attributes:
+      label: Contrato y evidencia visual
+      description: Para ninguno, justifica la clasificación. Para los demás, identifica baseline, viewports, estados y evidencia esperada.
+      placeholder: |
+        Clasificación: ninguno | cambio-visual | paridad-1-1
+        Fuente o baseline:
+        Viewports y estados:
+        Evidencia y diferencias aprobadas:
+    validations:
+      required: true
