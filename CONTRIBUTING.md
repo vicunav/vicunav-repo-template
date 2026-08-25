@@ -15,6 +15,9 @@ git submodule update --init --recursive
 
 Antes de modificar archivos, crea o selecciona un issue atómico. El issue debe
 describir un solo objetivo e incluir criterios de aceptación verificables.
+También debe clasificar su impacto como `ninguno`, `cambio-visual` o
+`paridad-1-1` y completar el contrato de evidencia correspondiente según
+[`docs/standards/docs/visual-fidelity.md`][fidelidad-visual].
 
 No mezcles trabajo de varios issues. Si aparece una necesidad fuera de alcance,
 crea otro issue y atiéndela en otra rama.
@@ -75,6 +78,7 @@ Nunca hagas push directo a `main`.
 - [ ] El cuerpo del PR incluye `Closes #N` con el número correcto.
 - [ ] Todos los criterios de aceptación del issue están cumplidos.
 - [ ] El título del PR cumple Conventional Commits.
+- [ ] La clasificación visual está justificada y la evidencia aplicable está enlazada.
 
 ## 5. Revisa y fusiona
 
@@ -86,3 +90,4 @@ El resultado en `main` debe ser un único commit para el issue. Elimina la rama
 después del merge.
 
 [flujo-git]: docs/standards/docs/git.md
+[fidelidad-visual]: docs/standards/docs/visual-fidelity.md

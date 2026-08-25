@@ -10,6 +10,7 @@ independent repository without treating it as a fork.
 - `CONTRIBUTING.md` with the atomic issue and squash-merge workflow.
 - `docs/standards/` pinned to the shared Vicunav standards.
 - A structured atomic-task issue form.
+- Visual-impact fields and a pull request evidence checklist.
 - PHP linting with WordPress Coding Standards in GitHub Actions.
 - GPL-2.0-or-later licensing suitable for WordPress themes and plugins.
 
