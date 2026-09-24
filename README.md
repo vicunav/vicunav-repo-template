@@ -1,8 +1,9 @@
 # Vicunav Repository Template
 
-Reusable starting point for repositories in the Vicunav ecosystem. Creating a
-repository from this template copies its files and directory structure into a new,
-independent repository without treating it as a fork.
+Reusable starting point for a self-contained Vicunav project: one repository that owns
+its own block theme, its own plugin, and its own documentation. Creating a repository
+from this template copies its files and directory structure into a new, independent
+repository without treating it as a fork.
 
 ## Included foundation
 
@@ -13,6 +14,18 @@ independent repository without treating it as a fork.
 - Visual-impact fields and a pull request evidence checklist.
 - PHP linting with WordPress Coding Standards in GitHub Actions.
 - GPL-2.0-or-later licensing suitable for WordPress themes and plugins.
+
+## Expected project layout
+
+A project created from this template is organized as:
+
+- `theme/` — the project's block theme.
+- `plugin/` — the project's plugin.
+- `docs/` — project documentation, plus `docs/standards/` (the shared standards
+  submodule).
+
+The project does not depend on shared theme or plugin packages from other Vicunav
+repositories; everything it needs lives in its own repository.
 
 ## Creating a repository from this template
 
@@ -41,12 +54,12 @@ After creating the repository:
 2. Replace every placeholder in `AGENTS.md` and document the actual validation
    commands.
 3. Confirm that the standards submodule points to the intended commit.
-4. Add the package bootstrap, tests, and tooling required by its contract.
+4. Add the `theme/` and `plugin/` bootstraps, tests, and tooling the project needs.
 5. Configure branch protection and allow only squash-merge pull requests into `main`.
 6. Verify that no `{{PLACEHOLDER}}` values remain in versioned files.
 
 Do not add product-specific files to this template merely because one consumer needs
-them. Shared repository scaffolding belongs here; package behavior belongs in the new
+them. Shared repository scaffolding belongs here; theme and plugin behavior belongs in the new
 repository.
 
 For more information, see the GitHub guide on [creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).

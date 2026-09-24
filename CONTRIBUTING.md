@@ -56,6 +56,9 @@ git add RUTA_DEL_ARCHIVO
 git commit -m "tipo: descripción breve"
 ```
 
+El scope es opcional; usa el nombre del proyecto, `theme` o `plugin`, por ejemplo
+`feat(theme): añade patrón de cabecera`.
+
 ## 4. Abre un pull request hacia `main`
 
 Publica la rama:

@@ -10,6 +10,20 @@ Las reglas transversales del repositorio están en [`docs/standards/`](docs/stan
 
 No repitas esas reglas aquí; este archivo solo contiene el contexto específico del repositorio.
 
+## Estructura
+
+El repositorio es un proyecto autocontenido:
+
+- `theme/`: theme de bloques del proyecto.
+- `plugin/`: plugin del proyecto.
+- `docs/`: documentación del proyecto y el submódulo `docs/standards/`.
+
+No dependas de paquetes compartidos de otros repositorios; theme, plugin y contenido
+viven aquí.
+
+Convenciones de commit: los scopes habituales son el nombre del proyecto, `theme` y
+`plugin` (por ejemplo `feat(theme): ...`).
+
 ## Validación
 
 <!-- Sustituye {{COMANDO_TEST}} por el comando completo para ejecutar las pruebas del repositorio. -->
