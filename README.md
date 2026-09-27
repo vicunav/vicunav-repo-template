@@ -27,6 +27,23 @@ A project created from this template is organized as:
 The project does not depend on shared theme or plugin packages from other Vicunav
 repositories; everything it needs lives in its own repository.
 
+## Project-level choices
+
+Two choices are made once, when the project is created, and recorded in that project's
+own architecture documentation:
+
+- **Styling stack** — native (`theme.json` and per-pattern CSS, the default) or
+  Tailwind CSS. See [ADR 0006](https://github.com/vicunav/vicunav-hub/blob/main/docs/adr/0006-stack-de-estilos-por-proyecto.md)
+  and `docs/standards/docs/tailwind.md`.
+- **Execution model** — agent-led (the default, as in `vicunav-restaurante`) or
+  owner-led, where the agent scaffolds, documents, reviews and validates but does not
+  implement the visual layer. See [ADR 0007](https://github.com/vicunav/vicunav-hub/blob/main/docs/adr/0007-modelo-de-ejecucion-por-proyecto.md)
+  and `docs/standards/docs/execution-model.md`.
+
+Neither choice is a default for the whole set of projects; each new project picks both
+independently. This template stays agnostic to both and does not include Tailwind
+tooling or any owner/agent workflow scaffolding beyond what is listed here.
+
 ## Creating a repository from this template
 
 1. Open this template repository on GitHub.
@@ -54,9 +71,13 @@ After creating the repository:
 2. Replace every placeholder in `AGENTS.md` and document the actual validation
    commands.
 3. Confirm that the standards submodule points to the intended commit.
-4. Add the `theme/` and `plugin/` bootstraps, tests, and tooling the project needs.
-5. Configure branch protection and allow only squash-merge pull requests into `main`.
-6. Verify that no `{{PLACEHOLDER}}` values remain in versioned files.
+4. Record the two project-level choices above (styling stack and execution model) in
+   the project's own architecture documentation.
+5. Add the `theme/` and `plugin/` bootstraps, tests, and tooling the project needs —
+   only once an agent-led project starts implementing them, or the owner does so
+   themselves in an owner-led project.
+6. Configure branch protection and allow only squash-merge pull requests into `main`.
+7. Verify that no `{{PLACEHOLDER}}` values remain in versioned files.
 
 Do not add product-specific files to this template merely because one consumer needs
 them. Shared repository scaffolding belongs here; theme and plugin behavior belongs in the new
